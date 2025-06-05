@@ -1,0 +1,213 @@
+/* Geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6fb;
+  color: #0e224a;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background-color: #0e224a;
+  padding: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100; /* Garante que o cabeçalho fique acima de outros conteúdos */
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+nav ul.menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul.menu li a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul.menu li a:hover,
+nav ul.menu li a.active {
+  background-color: #16336c;
+  color: #fff;
+  border-bottom: 2px solid #fff; /* Linha no hover */
+}
+
+/* Main content */
+main {
+  padding: 40px 0;
+}
+
+/* Introdução */
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Botão "Veja nossos produtos" */
+.btn-primary {
+  background-color: #16336c;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0e224a;
+  transform: scale(1.05);
+}
+
+.btn-primary:focus {
+  outline: 2px solid #16336c;
+  outline-offset: 4px;
+}
+
+/* Camisas em Destaque (Grid) */
+.destaques h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.produto-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.produto-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  background-color: #f1f1f1;
+}
+
+.produto-card img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  object-fit: contain;
+  height: 200px;
+  flex-grow: 0;
+}
+
+.produto-card h3 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #0e224a;
+  flex-grow: 0;
+}
+
+.preco {
+  font-size: 1.3rem;
+  color: #3b5998;
+  font-weight: 700;
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .grid-produtos {
+    grid-template-columns: repeat(2, 1fr); /* Para telas menores, exibe 2 colunas */
+  }
+
+  .produto-card {
+    width: 100%;
+    padding: 15px; /* Menos preenchimento em dispositivos móveis */
+  }
+
+  .produto-card img {
+    height: auto;
+    max-height: 150px; /* Limita a altura das imagens em dispositivos móveis */
+  }
+
+  .btn-primary {
+    width: 100%; /* Faz o botão ocupar a largura total */
+    font-size: 1rem; /* Reduz o tamanho do botão */
+  }
+}
+
+/* Para telas muito pequenas */
+@media (max-width: 480px) {
+  .grid-produtos {
+    grid-template-columns: 1fr; /* Exibe 1 coluna em telas bem pequenas */
+  }
+
+  .produto-card {
+    padding: 15px;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+  }
+}

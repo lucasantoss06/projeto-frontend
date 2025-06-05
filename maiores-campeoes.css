@@ -1,0 +1,245 @@
+/* --- Começando do zero: resets básicos para todos os elementos --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Estilo principal do corpo da página --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6fb;
+    color: #0e224a;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 0;
+}
+
+/* --- Container: a área que centraliza o conteúdo da página --- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Cabeçalho (Header): a barra superior do meu site --- */
+header {
+    background-color: #0e224a;
+    padding: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Conteúdo dentro do cabeçalho --- */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Adiciona flexibilidade no layout em telas pequenas */
+}
+
+/* --- Logo do site --- */
+.logo {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+/* --- Menu de navegação --- */
+nav ul.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+/* --- Links dentro do menu --- */
+nav ul.menu li a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --- Efeito no hover e quando ativo --- */
+nav ul.menu li a:hover,
+nav ul.menu li a.active {
+    background-color: #16336c;
+    color: #fff;
+}
+
+/* --- Seção "Maiores Campeões" --- */
+.campeoes-page {
+    padding: 40px 0;
+}
+
+/* --- Introdução da seção "Maiores Campeões" --- */
+.intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.intro h2 {
+    font-size: 3rem;
+    color: #0e224a;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* --- Grid para a lista de campeões --- */
+.campeoes-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* --- Estilo dos cards de campeões --- */
+.campeao-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+/* --- Efeito no hover do card --- */
+.campeao-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    border-color: #16336c;
+}
+
+/* --- Acessibilidade: foco no card com teclado --- */
+.campeao-card:focus {
+    outline: 2px solid #16336c;
+    outline-offset: 4px;
+}
+
+/* --- Estilo das imagens dentro dos cards --- */
+.campeao-card img {
+    width: 100%;
+    max-width: 250px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Títulos dos cards --- */
+.campeao-card h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #0e224a;
+    transition: color 0.3s ease;
+}
+
+/* --- Estilo dos parágrafos dentro dos cards --- */
+.campeao-card p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* --- Rodapé (Footer) --- */
+footer {
+    background-color: #0e224a;
+    padding: 20px;
+    margin-top: 60px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* --- Links no rodapé --- */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #16336c;
+}
+
+/* --- Responsividade para diferentes tamanhos de tela --- */
+
+/* Para telas médias (como tablets) */
+@media (max-width: 1000px) {
+    .container {
+        width: 95%;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    nav ul.menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .intro h2 {
+        font-size: 2.5rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+}
+
+/* Para telas menores (como a maioria dos smartphones) */
+@media (max-width: 768px) {
+    .campeoes-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .campeao-card {
+        width: 100%;
+    }
+}
+
+/* Para telas muito pequenas (smartphones menores) */
+@media (max-width: 480px) {
+    .campeoes-list {
+        grid-template-columns: 1fr;
+    }
+
+    .campeao-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .campeao-card p {
+        font-size: 0.95rem;
+    }
+}

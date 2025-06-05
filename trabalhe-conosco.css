@@ -1,0 +1,188 @@
+/* Geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff; /* Fundo branco para a página */
+  color: #1c3d5e;  /* Cor de texto mais suave */
+  line-height: 1.7; /* Ajustando o espaçamento das linhas para maior legibilidade */
+  min-height: 100vh;
+  font-size: 18px; /* Aumentando a fonte base para uma leitura melhor */
+  padding: 0; /* Removendo o padding de body */
+  margin: 0; /* Removendo margens de body */
+}
+
+/* Container */
+.container {
+  width: 100%; /* Definindo a largura para 100% */
+  max-width: 1200px; /* Limite máximo da largura */
+  margin: 0 auto; /* Centralizando o conteúdo */
+  padding: 0 20px; /* Adicionando padding nas laterais para que o conteúdo não encoste nas bordas */
+}
+
+/* Títulos principais */
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700; /* Títulos mais fortes */
+  color: #0e224a; /* Cor escura para os títulos */
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.7rem; /* Tamanho maior para o título principal */
+}
+
+h2 {
+  font-size: 2.2rem; /* Título de subtítulo */
+}
+
+h3 {
+  font-size: 1.9rem; /* Subtítulos menores */
+}
+
+/* Texto do corpo */
+p {
+  font-size: 1.3rem; /* Ajustando o tamanho do texto do parágrafo */
+  color: #444; /* Cor mais suave para o texto */
+  line-height: 1.8; /* Melhor espaçamento entre as linhas para facilitar a leitura */
+  margin-bottom: 20px; /* Adicionando espaço entre os parágrafos */
+}
+
+/* Links dentro do conteúdo */
+a {
+  color: #0e224a; /* Cor padrão para os links */
+  text-decoration: none; /* Removendo sublinhado */
+  font-weight: 600;
+}
+
+a:hover {
+  color: #16336c; /* Cor mais suave ao passar o mouse */
+}
+
+/* Header */
+header {
+  background-color: #0e224a;  /* Azul escuro original */
+  padding: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ajuste na sombra para suavidade */
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2rem; /* Aumentando o tamanho da logo para maior visibilidade */
+  letter-spacing: 2px;
+}
+
+/* Navegação - Menu com fundo azul escuro */
+nav {
+  background-color: #0e224a;  /* Azul escuro no menu de navegação */
+}
+
+nav ul.menu {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Aumentando o espaçamento entre os itens */
+  margin: 0; /* Removendo margens */
+  padding: 0; /* Removendo padding */
+}
+
+nav ul.menu li a {
+  color: #fff; /* Cor do texto dos links */
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 20px; /* Aumentando o espaço clicável para melhor usabilidade */
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Adicionando uma transição de transformação */
+}
+
+/* Hover - Cor mais suave ao passar o mouse */
+nav ul.menu li a:hover {
+  background-color: #16336c; /* Azul mais suave e escuro para o hover */
+  color: #fff;
+  transform: scale(1.05); /* Pequena animação de aumento ao passar o mouse */
+}
+
+/* Quando o link está ativo (botão clicado) */
+nav ul.menu li a.active {
+  background-color: #0e224a; /* Azul escuro para o botão ativo */
+}
+
+/* Cartões para cada tópico */
+.section-card {
+  background: rgba(73, 144, 226, 0.1);  /* Azul bem suave e quase transparente */
+  border-radius: 18px;
+  box-shadow: 0 5px 24px rgba(14,34,74,0.1); /* Sombras mais intensas para dar volume */
+  padding: 30px 24px; /* Reduzindo o padding para compactar os cards */
+  margin-bottom: 30px; /* Diminuindo o espaço entre os cards */
+  width: 100%;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s ease;
+  border: 1px solid #dbe5f0;  /* Bordas mais claras */
+}
+
+.section-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 40px rgba(14,34,74,0.2);
+}
+
+.section-card h3 {
+  color: #4b6c8e; /* Cor mais clara para os títulos */
+  font-size: 1.9rem; /* Ajustando o tamanho da fonte dos títulos */
+  margin-bottom: 12px; /* Reduzindo o espaço abaixo dos títulos */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.section-card p {
+  color: #444;
+  font-size: 1.3rem; /* Ajustando o tamanho do texto do parágrafo */
+  line-height: 1.7; /* Ajustando o espaçamento entre as linhas */
+}
+
+/* Remover os pontos das listas */
+.section-card ul {
+  list-style: none; /* Removendo os pontos das listas */
+  padding: 0;
+  margin: 0;
+}
+
+.section-card ul li {
+  padding: 4px 0;
+}
+
+/* Responsividade: Ajuste para telas menores */
+@media (max-width: 1000px) {
+  .quem-somos-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px; /* Reduzindo o espaçamento entre os cards em telas menores */
+  }
+  .section-card {
+    width: 90%;
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 15px; /* Ajustando a fonte para telas pequenas */
+  }
+  
+  .intro h2 {
+    font-size: 2.2rem; /* Ajustando o tamanho do título em telas menores */
+  }
+
+  .section-card {
+    padding: 24px 18px; /* Reduzindo o padding para cards em telas menores */
+  }
+}

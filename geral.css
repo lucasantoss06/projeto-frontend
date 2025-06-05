@@ -1,0 +1,153 @@
+/* Geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6fb;  /* Cor suave para fundo */
+  color: #0e224a;  /* Cor primária da marca */
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background-color: #0e224a;  /* Azul escuro */
+  padding: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+nav ul.menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul.menu li a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul.menu li a:hover,
+nav ul.menu li a.active {
+  background-color: #16336c;
+  color: #fff;
+}
+
+/* Página "Quem Somos" */
+.quem-somos-page {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.intro h2 {
+  font-size: 2.5rem;
+  color: #0e224a;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Cartões para Missão, Valores, Equipe */
+.quem-somos-cards {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.qs-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 5px 24px rgba(14,34,74,0.07);
+  padding: 36px 28px;
+  width: 340px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.qs-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 40px rgba(14,34,74,0.12);
+}
+
+.qs-icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.qs-card h3 {
+  color: #16336c;
+  font-size: 1.35rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.qs-card p, .qs-card ul {
+  color: #444;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.qs-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.qs-card ul li {
+  padding: 4px 0;
+}
+
+/* Responsividade: Ajuste para telas menores */
+@media (max-width: 1000px) {
+  .quem-somos-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+  .qs-card {
+    width: 90%;
+    max-width: 380px;
+  }
+}
