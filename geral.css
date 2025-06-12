@@ -1,34 +1,35 @@
-/* Estilos Globais */
+/* --- Estilos Globais --- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estilo geral do corpo da página */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #ffffff;
-  color: #1c3d5e;
-  line-height: 1.7;
+  background-color: #ffffff; /* Cor de fundo */
+  color: #1c3d5e; /* Cor do texto */
+  line-height: 1.7; /* Espaçamento entre as linhas */
   min-height: 100vh;
   font-size: 18px;
   padding: 0;
   margin: 0;
 }
 
-/* Container principal */
+/* --- Container Principal --- */
 .container {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  max-width: 1200px; /* Limite máximo da largura */
+  margin: 0 auto; /* Centraliza o conteúdo */
+  padding: 0 20px; /* Adiciona espaçamento nas laterais */
 }
 
-/* Estilo do cabeçalho */
+/* --- Estilo do Cabeçalho (Header) --- */
 header {
-  background-color: #0e224a;
-  padding: 20px 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #0e224a; /* Cor de fundo escura */
+  padding: 20px 0; /* Preenchimento superior e inferior */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombras para profundidade */
 }
 
 .header-content {
@@ -37,15 +38,22 @@ header {
   justify-content: space-between;
 }
 
-/* Menu de Navegação */
+.logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+/* --- Menu de Navegação --- */
 nav {
-  background-color: #0e224a;
+  background-color: #0e224a; /* Fundo azul escuro para o menu */
 }
 
 nav ul.menu {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 30px; /* Espaçamento entre os itens */
   margin: 0;
   padding: 0;
 }
@@ -53,60 +61,77 @@ nav ul.menu {
 nav ul.menu li a {
   color: #fff;
   font-weight: 600;
-  padding: 10px 20px;
+  padding: 10px 20px; /* Aumenta o clique */
   border-radius: 6px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transição de efeitos */
 }
 
 nav ul.menu li a:hover {
-  background-color: #16336c;
-  transform: scale(1.05);
+  background-color: #16336c; /* Efeito de cor ao passar o mouse */
+  transform: scale(1.05); /* Efeito de aumento */
 }
 
-/* Cartões de conteúdo */
+nav ul.menu li a.active {
+  background-color: #0e224a; /* Cor do item ativo */
+}
+
+/* --- Cartões de Conteúdo --- */
 .section-card {
-  background: rgba(73, 144, 226, 0.1);
+  background: rgba(73, 144, 226, 0.1); /* Fundo leve e transparente */
   border-radius: 18px;
   padding: 30px 24px;
   margin-bottom: 30px;
   text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s ease;
-  border: 1px solid #dbe5f0;
+  transition: transform 0.2s, box-shadow 0.2s ease; /* Transição suave ao passar o mouse */
+  border: 1px solid #dbe5f0; /* Borda suave */
 }
 
 .section-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 12px 40px rgba(14,34,74,0.2);
+  transform: translateY(-8px) scale(1.03); /* Efeito de deslocamento e aumento */
+  box-shadow: 0 12px 40px rgba(14,34,74,0.2); /* Sombras mais intensas */
 }
 
-/* Responsividade para telas pequenas */
+.section-card h3 {
+  color: #4b6c8e; /* Cor dos títulos dos cartões */
+  font-size: 1.9rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.section-card p {
+  color: #444;
+  font-size: 1.3rem;
+  line-height: 1.7;
+}
+
+/* --- Responsividade (Telinhas menores) --- */
 @media (max-width: 1000px) {
   .quem-somos-cards {
-    flex-direction: column;
+    flex-direction: column; /* Organiza os cartões em coluna */
     align-items: center;
-    gap: 24px;
+    gap: 24px; /* Menos espaçamento */
   }
   .section-card {
     width: 90%;
-    max-width: 380px;
+    max-width: 380px; /* Reduz o tamanho dos cartões */
   }
 }
 
 @media (max-width: 600px) {
   body {
-    font-size: 15px;
+    font-size: 15px; /* Ajuste no tamanho da fonte para telas pequenas */
   }
 
   .intro h2 {
-    font-size: 2.2rem;
+    font-size: 2.2rem; /* Ajuste no tamanho do título */
   }
 
   .section-card {
-    padding: 24px 18px;
+    padding: 24px 18px; /* Ajuste no preenchimento dos cartões */
   }
 }
 
-/* Rodapé */
+/* --- Estilo do Rodapé (Footer) --- */
 footer {
   background-color: #0e224a;
   padding: 20px;
@@ -115,29 +140,7 @@ footer {
   font-size: 1rem;
 }
 
-/* Responsividade para a Página de Produtos */
-@media (max-width: 768px) {
-  .grid-produtos {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .produto-card {
-    width: 100%;
-    padding: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .grid-produtos {
-    grid-template-columns: 1fr;
-  }
-
-  .produto-card {
-    padding: 15px;
-  }
-}
-
-/* Botões principais */
+/* --- Botões de Ação (Exemplo de botão principal) --- */
 .btn-primary {
   background-color: #16336c;
   color: #fff;
@@ -155,4 +158,95 @@ footer {
 .btn-primary:hover {
   background-color: #0e224a;
   transform: scale(1.05);
+}
+
+/* --- Responsividade para a Página de Produtos --- */
+@media (max-width: 768px) {
+  .grid-produtos {
+    grid-template-columns: repeat(2, 1fr); /* Reduz o número de colunas */
+  }
+
+  .produto-card {
+    width: 100%; /* Cards ocupam 100% da largura */
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-produtos {
+    grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+  }
+
+  .produto-card {
+    padding: 15px;
+  }
+}
+
+/* --- Cartões de Produto --- */
+.produto-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto; /* Removendo altura fixa */
+  max-height: 480px; /* Altura máxima para o cartão */
+}
+
+.produto-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Efeito de hover */
+}
+
+.produto-card img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  object-fit: contain;
+  height: 200px;
+}
+
+.produto-card h3 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #0e224a;
+}
+
+.preco {
+  font-size: 1.3rem;
+  color: #3b5998;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* --- Responsividade para Telas Menores --- */
+@media (max-width: 768px) {
+  .grid-produtos {
+    grid-template-columns: repeat(2, 1fr); /* Para telas menores, exibe 2 colunas */
+  }
+
+  .produto-card {
+    width: 100%; /* Cards ocupando 100% da largura */
+  }
+}
+
+/* --- Responsividade para telas muito pequenas --- */
+@media (max-width: 480px) {
+  .grid-produtos {
+    grid-template-columns: 1fr; /* Exibe 1 coluna em telas bem pequenas */
+  }
+
+  .produto-card {
+    padding: 15px;
+  }
+
+  .preco {
+    font-size: 1.1rem; /* Ajusta o tamanho do preço */
+  }
 }
