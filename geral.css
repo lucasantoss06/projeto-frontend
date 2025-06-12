@@ -149,9 +149,8 @@ nav ul.menu li a.active {
   line-height: 1.7; /* Ajustando o espaçamento entre as linhas */
 }
 
-/* Remover os pontos das listas */
+
 .section-card ul {
-  list-style: none; /* Removendo os pontos das listas */
   padding: 0;
   margin: 0;
 }
